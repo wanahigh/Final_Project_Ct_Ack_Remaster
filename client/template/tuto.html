@@ -59,7 +59,7 @@
                 Par défaut, « sudo iptables -L » n'affiche que la table "filter". Pour consulter les autres tables, vous devez ajouter l'option -t suivie de "nat", "mangle" ou "raw". Pour la configuration d'un pare-feu la table "filter" est toutefois la seule nécessaire.</p>
 
                 <div style="color:white;" class="col s12 card-panel hoverable red">
-                    ATTENTION, si vous avez modifié la règle par défaut pour le blocage (iptables -P INPUT DROP voir plus bas) et que vous tapez iptables -F vous bloquerez tous les accès … y compris celui en cours. Ceci est particulièrement problématique sur une machine sur laquelle vous accédez à distance (serveur etc.).
+                    <i class="material-icons">vpn_key</i>ATTENTION, si vous avez modifié la règle par défaut pour le blocage (iptables -P INPUT DROP voir plus bas) et que vous tapez iptables -F vous bloquerez tous les accès … y compris celui en cours. Ceci est particulièrement problématique sur une machine sur laquelle vous accédez à distance (serveur etc.).
                 </div>
 
                 <p>Si vous avez déjà modifié la configuration et que vous voulez la réinitialiser, tapez :</p>
@@ -81,7 +81,7 @@
                 <p style="color:greenyellow"># iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT</p>
             </div>
 
-                <div style="color:white;" class="col s12 red hoverable">Une ancienne configuration avec l'état "–state RELATED" est toujours sur internet, or cette option peut permettre l'ouverture de port non désirée sur votre machine par un attaquant. L'option "RELATED" est à utiliser avec prudence. Pour plus d'information : https://gist.github.com/azlux/6a70bd38bb7c525ab26efe7e3a7ea8ac</div>
+                <div style="color:white;" class="col s12 red hoverable"> <i class="material-icons">vpn_key</i>Une ancienne configuration avec l'état "–state RELATED" est toujours sur internet, or cette option peut permettre l'ouverture de port non désirée sur votre machine par un attaquant. L'option "RELATED" est à utiliser avec prudence. Pour plus d'information : https://gist.github.com/azlux/6a70bd38bb7c525ab26efe7e3a7ea8ac</div>
 
 
                 <h3>Permettre le trafic entrant sur un port spécifique</h3>
