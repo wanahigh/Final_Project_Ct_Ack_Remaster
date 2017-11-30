@@ -4,12 +4,15 @@
             <a ID="titre" href="#!" class="brand-logo">CT_ACK</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
+                <!-- Modal Trigger -->
+                <li><a class="waves-effect waves-light btn modal-trigger pink pulse" href="#modal1">CGU</a></li>
                 <li id="log">{{> loginButtons}}</li>
                 <li><a href="/">Home</a></li>
                 <li><a href="/exo">Exercice</a></li>
                 <li><a href="/tuto">Tuturiel</a></li>
                 <li><a href="/DL">Download</a></li>
-                <li><a  id="menu" class="waves-effect waves-light btn btn-floating pink" ><i class="material-icons">menu</i></a></li>
+                <li><a href="/CTC">Contact</a></li>
+                <li><a  id="menu" class="waves-effect waves-light btn btn-floating blue" ><i class="material-icons">menu</i></a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li>{{> loginButtons}}</li>
@@ -17,6 +20,7 @@
                 <li><a href="/exo">Exercice</a></li>
                 <li><a href="/tuto">Tuturiel</a></li>
                 <li><a href="/DL">Download</a></li>
+                <li><a href="/CTC">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -30,7 +34,7 @@
 
 
     <!-- Tap Target Structure -->
-    <div id="monancre" class="tap-target" data-activates="menu">
+    <div id="monancre"  class="tap-target yellow" data-activates="menu">
         <div class="tap-target-content">
             <h5>A propos?</h5>
             <p>Je m'appelle Fabien j'ai 26 ans, et voici mon projet de fin d'etude pour valider mon titre de developpeur logiciel!</p>
@@ -88,19 +92,51 @@
                     <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Privacy and Terms</a></li>
+
                 </ul>
             </div>
         </footer>
 
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>CGU</h4>
+            <p>Ce site n'a pour unique vocation que le passage d'un titre professionnel et n'existe que pour l'etat des technologie mise en oeuvre pour sa conception, par la présente vous prenez connaissance du fait que vos actes n'engage que vous et que l'auteur ne fait en aucun cas l'apologie de l'annonymas sur internet a des fin non louable. Le seul propos ici est le controle de la visibilité sur le net a l'heure ou il est facile de ne plus savoir ce que l'on partage ou non.
+                bonne visite :)</p>
+        </div>
+        <div class="modal-footer">
+            <a href="http://www.google.fr" class="modal-action modal-close waves-effect waves-green btn-flat red">Pas d'accord !</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat green">Je comprends</a>
+
+        </div>
+    </div>
+    <script>  $('.modal').modal({
+                dismissible: true, // Modal can be dismissed by clicking outside of the modal
+                opacity: .5, // Opacity of modal background
+                inDuration: 300, // Transition in duration
+                outDuration: 200, // Transition out duration
+                startingTop: '4%', // Starting top style attribute
+                endingTop: '10%', // Ending top style attribute
+                ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+                    console.log(modal, trigger);
+                },
+                // Callback for Modal close
+            }
+    );
+    </script>
     <script>$(document).ready( function () {
         $('.redirection').click(function() {
             $('html,body').animate({scrollTop: $("#monancre").offset().top}, 'slow'      );
         });
     }) </script>
+    <script type='text/javascript' src='http://www.webtutoriaux.com/services/compteur-visiteurs/index.php?client=157111'></script>
 
 
 
-
-    <a id="view-source" onclick="$('.tap-target').tapTarget('open')" class=" redirection waves-effect waves-light btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast pulse">Info Auteur</a>
+    <a id="view-source" onclick="$('.tap-target').tapTarget('open')" class=" redirection waves-effect waves-light btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast pink pulse">Info Auteur</a>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </template>

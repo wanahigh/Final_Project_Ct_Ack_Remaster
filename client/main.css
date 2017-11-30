@@ -241,6 +241,20 @@ html, body {
 /*glyphe home */
 
 
+   .pin-top {
+       position: relative;
+   }
+
+
+   .pin-bottom {
+       position: relative;
+   }
+
+
+   .pinned {
+       position: fixed !important;
+   }
+
 .img{
     margin-left:25%;
     margin-top:0.8vw;
@@ -258,9 +272,16 @@ header
     margin-top:1vh;
 }
 
-#titre{
-
+.imgH1{
+    width:70%;
+    margin-left:1vw;
+    margin-top:1.5vh;
 }
+
+.flex{
+    display:inline-block;
+}
+
 
 /*
 ul #mobile-demo .side-nav  {
