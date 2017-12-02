@@ -1,11 +1,13 @@
 <template name="layout">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <nav>
         <div class="nav-wrapper #2196f3 blue">
-            <a ID="titre" href="#!" class="brand-logo">CT_ACK</a>
+            <a ID="titre" href="#!" class="brand-logo">Pro_xy</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <!-- Modal Trigger -->
                 <li><a class="waves-effect waves-light btn modal-trigger pink pulse" href="#modal1">CGU</a></li>
+                <li><button class="btn purple" onclick="vst()">nombres de visiteur</button></li>
                 <li id="log">{{> loginButtons}}</li>
                 <li><a href="/">Home</a></li>
                 <li><a href="/exo">Exercice</a></li>
@@ -13,7 +15,7 @@
                 <li><a href="/DL">Download</a></li>
                 <li><a href="/CTC">Contact</a></li>
                 <li><a  id="menu" class="waves-effect waves-light btn btn-floating blue" ><i class="material-icons">menu</i></a></li>
-            </ul>
+                </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li>{{> loginButtons}}</li>
                 <li><a href="/">Home</a></li>
@@ -25,7 +27,21 @@
         </div>
     </nav>
     <script> $(".button-collapse").sideNav();</script>
+    <script>$(document).ready(function () {
+        $.getJSON("http://jsonip.com/?callback=?", function (data) {
+            console.log(data);
+            tab = [];
+            tab.push(data.ip);
+            UserID.insert(tab);
 
+        });
+
+    });
+    function vst(){
+        alert (UserID.find().count());
+
+    }
+    </script>
 
 
 
@@ -112,6 +128,9 @@
 
         </div>
     </div>
+
+
+
     <script>  $('.modal').modal({
                 dismissible: true, // Modal can be dismissed by clicking outside of the modal
                 opacity: .5, // Opacity of modal background
@@ -131,12 +150,13 @@
             $('html,body').animate({scrollTop: $("#monancre").offset().top}, 'slow'      );
         });
     }) </script>
-    <script type='text/javascript' src='http://www.webtutoriaux.com/services/compteur-visiteurs/index.php?client=157111'></script>
+
 
 
 
     <a id="view-source" onclick="$('.tap-target').tapTarget('open')" class=" redirection waves-effect waves-light btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast pink pulse">Info Auteur</a>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
+    <script src="../materialize.min.js"></script>
+    <script src="../material.min.js"></script>
+
 </template>
