@@ -263,9 +263,17 @@ html, body {
 header
 {
 
-    background-image:url("css_code.jpg");
+    background-image:url("datacenter.jpeg");
     background-size:cover;
-    background-position:fixe;
+
+}
+
+main{
+    background-image:url('css_code.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+
+
 }
 
 #menu{
