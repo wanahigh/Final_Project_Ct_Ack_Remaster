@@ -1,9 +1,22 @@
 <template name="layout">
+    <!-- Compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>-->
+
+    <link rel="stylesheet" href="../material.css">
+    <link rel="stylesheet" href="../materialize.css">
+    <script src="../material.js"></script>
+    <script src="../materialize.js"></script>
+    <script src="../jquery-3.2.1.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <nav>
         <div class="nav-wrapper #2196f3 blue">
             <a ID="titre" href="#!" class="brand-logo">Pro_xy</a>
-            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi mdi-menu"></i></a>
             <ul class="right hide-on-med-and-down">
                 <!-- Modal Trigger -->
                 <li><a class="waves-effect waves-light btn modal-trigger pink" href="#modal1">CGU</a></li>
@@ -11,37 +24,38 @@
                 <li id="log">{{> loginButtons}}</li>
                 <li><a href="/">Home</a></li>
                 <li><a href="/exo">Exercice</a></li>
-                <li><a href="/tuto">Tuturiel</a></li>
+                <li><a href="/tuto">Tutoriel</a></li>
                 <li><a href="/DL">Download</a></li>
                 <li><a href="/CTC">Contact</a></li>
-                <li><a  id="menu" class="waves-effect waves-light btn btn-floating blue" ><i class="material-icons">menu</i></a></li>
+                <li><a  id="menu" class="waves-effect waves-light btn btn-floating blue" ><i class="mdi mdi-menu"></i></a></li>
                 </ul>
-            <ul class="side-nav" id="mobile-demo">
+            <ul style="background-color:dodgerblue" class="side-nav" id="slide-out">
                 <li>{{> loginButtons}}</li>
                 <li><a href="/">Home</a></li>
                 <li><a href="/exo">Exercice</a></li>
-                <li><a href="/tuto">Tuturiel</a></li>
+                <li><a href="/tuto">Tutoriel</a></li>
                 <li><a href="/DL">Download</a></li>
                 <li><a href="/CTC">Contact</a></li>
             </ul>
+
         </div>
     </nav>
-    <script> $(".button-collapse").sideNav();</script>
-  <!--  <script>$(document).ready(function () {
-        $.getJSON("http://jsonip.com/?callback=?", function (data) {
-            console.log(data);
-            tab = [];
-            tab.push(data.ip);
-            UserID.insert(tab);
+  <script>
+        $(document).ready(function () {
+            $.getJSON("http://jsonip.com/?callback=?", function (data) {
+                console.log(data);
+                tab = [];
+                tab.push(data.ip);
+                UserID.insert(tab);
+
+            });
 
         });
+        function vst(){
+            alert (UserID.find().count());
 
-    });
-    function vst(){
-        alert (UserID.find().count());
-
-    }
-    </script>-->
+        }
+    </script>
 
 
 
